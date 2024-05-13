@@ -7,8 +7,10 @@ import { Stacked, Pie, Button, LineChart, SparkLine } from '../components';
 import { medicalproBranding, recentTransactions, weeklyStats, dropdownData, SparklineAreaData, ecomPieChartData } from '../data/dummy';
 import fetchCurrencyData from '../API/currencyAPI';
 import { CurrencyDropDown, CurrencyDisplay } from '../components/CurrencyComponents';
+
 import { useStateContext } from '../contexts/ContextProvider';
 import product9 from '../data/product9.jpg';
+import Indicador from '../components/Indicador';
 
 const DropDown = ({ currentMode }) => (
   <div className="w-28 border-1 border-color px-2 py-1 rounded-md">
@@ -78,7 +80,11 @@ const Ecommerce = () => {
             />
           </div>
         </div>
-    </div>
+      </div>
+
+      <Indicador />
+
+
     <div className="mt-24 mb-24 bg-white dark:text-gray-200 dark:bg-secondary-dark-bg">
       <p className="text-center font-bold">
         Currency compared to USD
@@ -99,7 +105,6 @@ const Ecommerce = () => {
         </div>
       </div>
     </div>
-
 
 
       <div className="flex gap-10 flex-wrap justify-center">
