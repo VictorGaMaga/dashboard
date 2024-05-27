@@ -1,10 +1,9 @@
-import { data } from 'autoprefixer';
 import React, { useEffect, useState } from 'react';
 
 function Indicador() {
     const [indicador, setIndicador] = useState(0);
     useEffect(() => {
-      fetch('https://api-dash-f8f9g4fzm-victorgamagas-projects.vercel.app/indicador')
+      fetch('https://api-dash-tau.vercel.app/indicador')
         .then(response => response.json())
         .then(data => {
           console.log('Dados do indicador recebidos:', data);
